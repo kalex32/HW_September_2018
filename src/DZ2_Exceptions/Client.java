@@ -54,9 +54,9 @@ class Client implements Clients {
     public void toPay() {
         System.out.println("Сумма Ваших покупок: " + sumCart(cart));
         System.out.println("Введите сумму оплаты:");
-        Shop.setCassa(Shop.getCassa() + scannerClient.nextInt());
+        Shop.setCashdesk(Shop.getCashdesk() + scannerClient.nextInt());
         System.out.println("Добавлять будете?");
-        if (scannerClient.next().equals("да")) Shop.setCassa(Shop.getCassa() + scannerClient.nextInt());
+        if (scannerClient.next().equals("да")) Shop.setCashdesk(Shop.getCashdesk() + scannerClient.nextInt());
 
     }
 

@@ -51,10 +51,10 @@ class Administrator implements Employees {
         System.out.println();
         System.out.println("Сумма покупок клиента " + Client.getNameClient() + ": " + Client.sumCart(cart));
         System.out.println();
-        System.out.println("Сумма покупок клиента " + Client.getNameClient() + ": " + Shop.getCassa());
-        if (Client.sumCart(cart) - Shop.getCassa() <= 0) {
+        System.out.println("Сумма покупок клиента " + Client.getNameClient() + ": " + Shop.getCashdesk());
+        if (Client.sumCart(cart) - Shop.getCashdesk() <= 0) {
             System.out.println("Поздравляем с покупкой!!!");
-            Shop.setCassa(0);
+            Shop.setCashdesk(0);
         } else System.out.println("Вы не выполнили условия сделки, добавляем Вас в \"черный список\" ");
         toAddToTheBlackList(blackList);
     }

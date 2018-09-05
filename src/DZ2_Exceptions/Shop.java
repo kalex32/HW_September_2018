@@ -4,14 +4,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Shop {
-    private static int cassa = 0;
+    private static int cashdesk = 0;
 
-    static int getCassa() {
-        return cassa;
+    static int getCashdesk() {
+        return cashdesk;
     }
 
-    static void setCassa(int cassa) {
-        Shop.cassa = cassa;
+    static void setCashdesk(int cashdesk) {
+        Shop.cashdesk = cashdesk;
     }
 
     private Scanner scannerShop = new Scanner(System.in);
