@@ -1,6 +1,6 @@
 package DZ2_Collections;
 
-public class ClientTechnologies {
+public class ClientTechnologies implements Skills{
     private boolean clientTechnologies;
 
     ClientTechnologies(boolean clientTechnologies) {

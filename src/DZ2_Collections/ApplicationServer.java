@@ -1,6 +1,6 @@
 package DZ2_Collections;
 
-public class ApplicationServer {
+public class ApplicationServer implements Skills{
     private boolean applicationServer;
 
     ApplicationServer(boolean applicationServer) {
