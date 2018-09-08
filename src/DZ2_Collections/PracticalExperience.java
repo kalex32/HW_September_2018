@@ -1,13 +1,19 @@
 package DZ2_Collections;
 
-class PracticalExperience implements Skills{
+class PracticalExperience implements Skills {
     private int practicalExperience;
 
     PracticalExperience(int practicalExperience) {
         this.practicalExperience = practicalExperience;
     }
 
-    int getPracticalExperience() {
+    private int getPracticalExperience() {
         return practicalExperience;
+    }
+
+    @Override
+    public String toString() {
+        return "Опыт практической работы, " +
+                "лет: " + getPracticalExperience() + "; ";
     }
 }

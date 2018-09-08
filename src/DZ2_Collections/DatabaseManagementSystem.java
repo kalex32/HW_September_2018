@@ -7,7 +7,16 @@ class DatabaseManagementSystem implements Skills{
         this.databaseManagementSystem = databaseManagementSystem;
     }
 
-    boolean isDatabaseManagementSystem() {
+    private boolean isDatabaseManagementSystem() {
         return databaseManagementSystem;
+    }
+
+    @Override
+    public String toString() {
+        String s;
+        if (isDatabaseManagementSystem()) s = "да";
+        else s = "нет";
+        return "Система управления базами данных, " +
+                "знание: " + s + "; ";
     }
 }

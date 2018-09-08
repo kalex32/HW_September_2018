@@ -1,13 +1,22 @@
 package DZ2_Collections;
 
-class ServerTechnologies implements Skills{
+class ServerTechnologies implements Skills {
     private boolean serverTechnologies;
 
     ServerTechnologies(boolean serverTechnologies) {
         this.serverTechnologies = serverTechnologies;
     }
 
-    boolean isServerTechnologies() {
+    private boolean isServerTechnologies() {
         return serverTechnologies;
+    }
+
+    @Override
+    public String toString() {
+        String s;
+        if (isServerTechnologies()) s = "да";
+        else s = "нет";
+        return "Серверные технологии, " +
+                "знание: " + s + "; ";
     }
 }

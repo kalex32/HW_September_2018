@@ -8,7 +8,7 @@ class EnglishSkill implements Skills {
         this.levelOfKnowledge = levelOfKnowledge;
     }
 
-    String getLevelOfKnowledge() {
+    private String getLevelOfKnowledge() {
         return levelOfKnowledge;
     }
 
@@ -18,5 +18,11 @@ class EnglishSkill implements Skills {
             if (i == r) break;
         }
         return levelEnglish[i];
+    }
+
+    @Override
+    public String toString() {
+        return "Знание английского, " +
+                "уровень: " + getLevelOfKnowledge() + "; ";
     }
 }

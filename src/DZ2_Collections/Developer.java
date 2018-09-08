@@ -15,8 +15,8 @@ class Developer {
 //              MethodsAndInstrumentsOfAnalysisAndPlanning methodsAndInstrumentsOfAnalysisAndPlanning,
 //              ServerTechnologies serverTechnologies, SoftwareEngineeringProcess softwareEngineeringProcess,
 //              WebServer webServer, EnglishSkill englishSkill, PracticalExperience practicalExperience)
- {
-     Random random = new Random();
+    {
+        Random random = new Random();
         this.nameDeveloper = nameDeveloper;
         this.skills.add(new ApplicationServer(random.nextBoolean()));
         this.skills.add(new ClientTechnologies(random.nextBoolean()));
@@ -24,7 +24,7 @@ class Developer {
         this.skills.add(new MethodsAndInstrumentsOfAnalysisAndPlanning(random.nextBoolean()));
         this.skills.add(new ServerTechnologies(random.nextBoolean()));
         this.skills.add(new SoftwareEngineeringProcess(SoftwareEngineeringProcess.levelSEP
-                (SoftwareEngineeringProcess.levelOfSEP,random.nextInt(SoftwareEngineeringProcess.levelOfSEP.length))));
+                (SoftwareEngineeringProcess.levelOfSEP, random.nextInt(SoftwareEngineeringProcess.levelOfSEP.length))));
         this.skills.add(new WebServer(random.nextBoolean()));
         this.skills.add(new EnglishSkill(EnglishSkill.levelEng(EnglishSkill.levelEnglish, random.nextInt
                 (EnglishSkill.levelEnglish.length))));
@@ -36,23 +36,29 @@ class Developer {
 //        if (scannerDeveloper.nextInt()==1) skills.add(new ApplicationServer(true));
     }
 
-//    public Developer(String next, boolean b, boolean b1, boolean b2, boolean b3, boolean b4, boolean b5, boolean b6,
-//                     boolean b7, int i) {
-//    }
-
-//    Developer(String nameDeveloper) {
-//        this.nameDeveloper = nameDeveloper;
-//    }
 
     String getNameDeveloper() {
         return nameDeveloper;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Developer{" +
+//                "nameDeveloper='" + nameDeveloper + '\'' +
+//                ", skills=" + skills +
+//                '}';
+//    }
+
+
     @Override
     public String toString() {
-        return "Developer{" +
-                "nameDeveloper='" + nameDeveloper + '\'' +
-                ", skills=" + skills +
-                '}';
+        return "Developer: " +
+                "Имя = " + getNameDeveloper() + "\n" +
+                "skills: " +
+                skills.toString();
     }
+
+//    Skills printSkills(ArrayList skills){
+//                return skills.toString()
+//    }
 }
