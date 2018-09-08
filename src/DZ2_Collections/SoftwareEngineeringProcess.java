@@ -23,7 +23,7 @@ class SoftwareEngineeringProcess implements Skills {
 
     @Override
     public String toString() {
-        return "Разработка программного обеспечения, " +
+        return "\n" + "Разработка программного обеспечения, " +
                 "уровень: " + getLevelOfSoftwareEngineeringProcess() + "; ";
     }
 }

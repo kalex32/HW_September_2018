@@ -16,7 +16,7 @@ class ApplicationServer implements Skills {
         String s;
         if (isApplicationServer()) s = "да";
         else s = "нет";
-        return "Сервер приложений, " +
+        return "\n" + "Сервер приложений, " +
                 "знание: " + s + "; ";
     }
 }

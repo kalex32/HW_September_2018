@@ -16,7 +16,7 @@ class ServerTechnologies implements Skills {
         String s;
         if (isServerTechnologies()) s = "да";
         else s = "нет";
-        return "Серверные технологии, " +
+        return "\n" + "Серверные технологии, " +
                 "знание: " + s + "; ";
     }
 }

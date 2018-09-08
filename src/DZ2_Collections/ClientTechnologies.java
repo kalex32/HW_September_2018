@@ -16,7 +16,7 @@ public class ClientTechnologies implements Skills {
         String s;
         if (isClientTechnologies()) s = "да";
         else s = "нет";
-        return "Клиентские технологии, " +
+        return "\n" + "Клиентские технологии, " +
                 "знание: " + s + "; ";
     }
 }

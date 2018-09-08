@@ -16,7 +16,7 @@ class WebServer implements Skills {
         String s;
         if (isWebServer()) s = "да";
         else s = "нет";
-        return "WEB сервер, " +
+        return "\n" + "WEB сервер, " +
                 "знание: " + s + "; ";
     }
 }

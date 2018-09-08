@@ -1,6 +1,6 @@
 package DZ2_Collections;
 
-class DatabaseManagementSystem implements Skills{
+class DatabaseManagementSystem implements Skills {
     private boolean databaseManagementSystem;
 
     DatabaseManagementSystem(boolean databaseManagementSystem) {
@@ -16,7 +16,7 @@ class DatabaseManagementSystem implements Skills{
         String s;
         if (isDatabaseManagementSystem()) s = "да";
         else s = "нет";
-        return "Система управления базами данных, " +
+        return "\n" + "Система управления базами данных, " +
                 "знание: " + s + "; ";
     }
 }

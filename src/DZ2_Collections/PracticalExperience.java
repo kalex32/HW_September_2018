@@ -13,7 +13,7 @@ class PracticalExperience implements Skills {
 
     @Override
     public String toString() {
-        return "Опыт практической работы, " +
+        return "\n" + "Опыт практической работы, " +
                 "лет: " + getPracticalExperience() + "; ";
     }
 }
