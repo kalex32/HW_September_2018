@@ -1,7 +1,9 @@
 package DZ2_Collections;
 
-class SoftwareEngineeringProcess {
+class SoftwareEngineeringProcess implements Skills{
     private String levelOfSoftwareEngineeringProcess;
+    static String[] levelOfSEP = {"low", "medium", "high"};
+
 
     SoftwareEngineeringProcess(String levelOfSoftwareEngineeringProcess) {
         this.levelOfSoftwareEngineeringProcess = levelOfSoftwareEngineeringProcess;
@@ -9,5 +11,13 @@ class SoftwareEngineeringProcess {
 
     String getLevelOfSoftwareEngineeringProcess() {
         return levelOfSoftwareEngineeringProcess;
+    }
+
+    static String levelSEP(String[]levelOfSEP,int r){
+        int i;
+        for (i = 0; i < levelOfSEP.length; i++) {
+            if (i==r) break;
+        }
+        return levelOfSEP[i];
     }
 }

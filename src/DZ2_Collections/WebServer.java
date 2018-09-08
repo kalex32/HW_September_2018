@@ -1,6 +1,6 @@
 package DZ2_Collections;
 
-class WebServer {
+class WebServer implements Skills{
     private boolean webServer;
 
     WebServer(boolean webServer) {

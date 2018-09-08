@@ -1,6 +1,6 @@
 package DZ2_Collections;
 
-class MethodsAndInstrumentsOfAnalysisAndPlanning {
+class MethodsAndInstrumentsOfAnalysisAndPlanning implements Skills{
     private boolean methodsAndInstrumentsOfAnalysisAndPlanning;
 
     MethodsAndInstrumentsOfAnalysisAndPlanning(boolean methodsAndInstrumentsOfAnalysisAndPlanning) {

@@ -1,6 +1,6 @@
 package DZ2_Collections;
 
-class DatabaseManagementSystem {
+class DatabaseManagementSystem implements Skills{
     private boolean databaseManagementSystem;
 
     DatabaseManagementSystem(boolean databaseManagementSystem) {

@@ -7,8 +7,12 @@ public class RunDev {
         System.out.println("Введите имя:");
         Scanner scannerRunDev = new Scanner(System.in);
 
-        Developer developer = new Developer(scannerRunDev.next());
-        System.out.println(developer.toString());
+//        Developer developer1 = new Developer(scannerRunDev.next(), true, true,
+//                false,true, true,
+//                false,true,true,2);
+
+        Developer developer2=new Developer(scannerRunDev.next());
+        System.out.println(developer2.toString());
 
     }
 }

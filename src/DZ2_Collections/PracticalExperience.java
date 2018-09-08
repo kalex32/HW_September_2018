@@ -1,6 +1,6 @@
 package DZ2_Collections;
 
-class PracticalExperience {
+class PracticalExperience implements Skills{
     private int practicalExperience;
 
     PracticalExperience(int practicalExperience) {

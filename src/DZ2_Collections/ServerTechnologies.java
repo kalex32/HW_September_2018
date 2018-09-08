@@ -1,6 +1,6 @@
 package DZ2_Collections;
 
-class ServerTechnologies {
+class ServerTechnologies implements Skills{
     private boolean serverTechnologies;
 
     ServerTechnologies(boolean serverTechnologies) {
