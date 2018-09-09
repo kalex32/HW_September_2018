@@ -17,6 +17,6 @@ public class ClientTechnologies implements Skills {
         if (isClientTechnologies()) s = "да";
         else s = "нет";
         return "\n" + "Клиентские технологии, " +
-                "знание: " + s + "; ";
+                "знание: " + s;
     }
 }

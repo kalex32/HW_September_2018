@@ -23,6 +23,6 @@ class EnglishSkill implements Skills {
     @Override
     public String toString() {
         return "\n" + "Знание английского, " +
-                "уровень: " + getLevelOfKnowledge() + "; ";
+                "уровень: " + getLevelOfKnowledge();
     }
 }

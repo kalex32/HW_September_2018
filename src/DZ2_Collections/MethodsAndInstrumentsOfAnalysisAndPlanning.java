@@ -17,6 +17,6 @@ class MethodsAndInstrumentsOfAnalysisAndPlanning implements Skills {
         if (isMethodsAndInstrumentsOfAnalysisAndPlanning()) s = "да";
         else s = "нет";
         return "\n" + "Методы и инструменты анализа и планирования, " +
-                "знание: " + s + "; ";
+                "знание: " + s;
     }
 }

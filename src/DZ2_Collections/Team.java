@@ -1,8 +1,9 @@
 package DZ2_Collections;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 class Team {
     private String nameTeam;
-    ArrayList<Developer> team = new ArrayList<>();
+    LinkedList<Developer> team = new LinkedList<>();
 }

@@ -17,6 +17,6 @@ class DatabaseManagementSystem implements Skills {
         if (isDatabaseManagementSystem()) s = "да";
         else s = "нет";
         return "\n" + "Система управления базами данных, " +
-                "знание: " + s + "; ";
+                "знание: " + s;
     }
 }
