@@ -20,14 +20,16 @@ class Team {
 
     void addToTeam(Developer[] developers ){
         team.addAll(Arrays.asList(developers));
-        toString();
+        System.out.println(toString());
     }
 
     @Override
     public String toString() {
+        Developer developer = new Developer();
+//        developer.toString();
         return "Team: " +
                 "название: " + getNameTeam() + '\'' +
-                ", team=" + team +
+                ", team=" + developer.toString() +
                 '}';
     }
 }

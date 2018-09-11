@@ -35,6 +35,8 @@ class Developer {
 //                "Any key - Нет");
 //        if (scannerDeveloper.nextInt()==1) skills.add(new ApplicationServer(true));
     }
+    Developer(){
+    }
 
 
     String getNameDeveloper() {

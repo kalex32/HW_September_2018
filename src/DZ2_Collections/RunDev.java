@@ -11,12 +11,14 @@ public class RunDev {
 
         System.out.println("Команда из скольки человек?");
         int capacity = scannerRunDev.nextInt();
+        scannerRunDev.nextLine();
         Team team = new Team(name, capacity);
 
         Developer[] dev = new Developer[capacity];
         for (int i = 0; i < capacity; i++) {
             System.out.println("Введите имя:");
-            dev[i] = new Developer(scannerRunDev.nextLine());
+            String z = scannerRunDev.nextLine();
+            dev[i] = new Developer(z);
         }
         team.addToTeam(dev);
 
