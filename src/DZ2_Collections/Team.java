@@ -2,11 +2,10 @@ package DZ2_Collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 
 class Team /*extends Developer*/ {
     private String nameTeam;
-    ArrayList<Developer> team = new ArrayList<>();
+    private ArrayList<Developer> team = new ArrayList<>();
 
 
     Team(String nameTeam, int capacity) {
@@ -14,8 +13,12 @@ class Team /*extends Developer*/ {
         this.team.ensureCapacity(capacity);
     }
 
-    String getNameTeam() {
+    private String getNameTeam() {
         return nameTeam;
+    }
+
+    private ArrayList<Developer> getTeam() {
+        return team;
     }
 
     void addToTeam(Developer[] developers) {
@@ -30,7 +33,7 @@ class Team /*extends Developer*/ {
     @Override
     public String toString() {
         return "Название команды: " + getNameTeam() + "\n" +
-                "Команда: " + "\n" +"\b"+ team;
+                "Команда: " + "\n" +"\b"+ getTeam();
 //                "} "/* + super.toString()*/;
     }
 }
