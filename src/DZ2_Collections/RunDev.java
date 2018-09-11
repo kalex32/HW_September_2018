@@ -1,5 +1,6 @@
 package DZ2_Collections;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RunDev {
@@ -20,6 +21,7 @@ public class RunDev {
             String z = scannerRunDev.nextLine();
             dev[i] = new Developer(z);
         }
+//        System.out.println(Arrays.toString(dev));
         team.addToTeam(dev);
 
 

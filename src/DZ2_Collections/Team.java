@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-class Team extends Developer{
+class Team /*extends Developer*/ {
     private String nameTeam;
     ArrayList<Developer> team = new ArrayList<>();
 
@@ -18,18 +18,19 @@ class Team extends Developer{
         return nameTeam;
     }
 
-    void addToTeam(Developer[] developers ){
+    void addToTeam(Developer[] developers) {
         team.addAll(Arrays.asList(developers));
-        System.out.println(toString());
+//        for (Developer i: team) {
+//            System.out.println(i.toString());
+//        }
+
+        System.out.println(toString().replace("[", "").replace("]", ""));
     }
 
     @Override
     public String toString() {
-        /*Developer developer = new Developer();*/
-//        developer.toString();
-        return "Team: " +
-                "название: " + getNameTeam() + '\'' +
-                ", team=" + super.toString() +
-                '}';
+        return "Название команды: " + getNameTeam() + "\n" +
+                "Команда: " + "\n" +"\b"+ team;
+//                "} "/* + super.toString()*/;
     }
 }

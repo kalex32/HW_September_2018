@@ -2,20 +2,12 @@ package DZ2_Collections;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
 class Developer {
     private String nameDeveloper;
     ArrayList<Skills> skills = new ArrayList<>();
 
-    //Scanner scannerDeveloper = new Scanner(System.in);
-
-    Developer(String nameDeveloper) //, ApplicationServer applicationServer, ClientTechnologies clientTechnologies,
-//              DatabaseManagementSystem databaseManagementSystem,
-//              MethodsAndInstrumentsOfAnalysisAndPlanning methodsAndInstrumentsOfAnalysisAndPlanning,
-//              ServerTechnologies serverTechnologies, SoftwareEngineeringProcess softwareEngineeringProcess,
-//              WebServer webServer, EnglishSkill englishSkill, PracticalExperience practicalExperience)
-    {
+    Developer(String nameDeveloper) {
         Random random = new Random();
         this.nameDeveloper = nameDeveloper;
         this.skills.add(new ApplicationServer(random.nextBoolean()));
@@ -29,27 +21,13 @@ class Developer {
         this.skills.add(new EnglishSkill(EnglishSkill.levelEng(EnglishSkill.levelEnglish, random.nextInt
                 (EnglishSkill.levelEnglish.length))));
         this.skills.add(new PracticalExperience(random.nextInt(20)));
-//        this.skills = skills;
-//        System.out.println("Владеете серевром приложений?"+"\n"+
-//                "1 - Да"+"\n"+
-//                "Any key - Нет");
-//        if (scannerDeveloper.nextInt()==1) skills.add(new ApplicationServer(true));
-    }
-    Developer(){
+
     }
 
 
-    String getNameDeveloper() {
+    private String getNameDeveloper() {
         return nameDeveloper;
     }
-
-//    @Override
-//    public String toString() {
-//        return "Developer{" +
-//                "nameDeveloper='" + nameDeveloper + '\'' +
-//                ", skills=" + skills +
-//                '}';
-//    }
 
 
     @Override
@@ -57,10 +35,6 @@ class Developer {
         return "Developer: " +
                 "Имя = " + getNameDeveloper() + "\n" +
                 "skills: " +"\n"+
-                skills.toString();
+                skills.toString()+"\n"+"\b";
     }
-
-//    Skills printSkills(ArrayList skills){
-//                return skills.toString()
-//    }
 }
