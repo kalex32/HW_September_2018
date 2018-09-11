@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-class Team {
+class Team extends Developer{
     private String nameTeam;
     ArrayList<Developer> team = new ArrayList<>();
 
@@ -25,11 +25,11 @@ class Team {
 
     @Override
     public String toString() {
-        Developer developer = new Developer();
+        /*Developer developer = new Developer();*/
 //        developer.toString();
         return "Team: " +
                 "название: " + getNameTeam() + '\'' +
-                ", team=" + developer.toString() +
+                ", team=" + super.toString() +
                 '}';
     }
 }
