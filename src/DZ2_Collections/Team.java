@@ -2,16 +2,19 @@ package DZ2_Collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 class Team /*extends Developer*/ {
-    private String nameTeam;
-    private ArrayList<Developer> team = new ArrayList<>();
+    String nameTeam;
+    ArrayList<Developer> team = new ArrayList<>();
+    Scanner scannerTeam = new Scanner(System.in);
 
 
-    Team(String nameTeam, int capacity) {
+    Team(String nameTeam, int capacityTeam) {
         this.nameTeam = nameTeam;
-        this.team.ensureCapacity(capacity);
+        this.team.ensureCapacity(capacityTeam);
     }
+
 
     private String getNameTeam() {
         return nameTeam;
@@ -21,12 +24,13 @@ class Team /*extends Developer*/ {
         return team;
     }
 
-    void addToTeam(Developer[] developers) {
-        team.addAll(Arrays.asList(developers));
-//        for (Developer i: team) {
-//            System.out.println(i.toString());
-//        }
-
+    void addToTeam(int amountOfDevs) {
+        Developer[] dev = new Developer[amountOfDevs];
+        for (int i = 0; i < amountOfDevs; i++) {
+            System.out.println("Введите имя:");
+            dev[i] = new Developer(scannerTeam.nextLine());
+            team.addAll(Arrays.asList(dev));
+        }
         System.out.println(toString().replace("[", "").replace("]", ""));
     }
 
