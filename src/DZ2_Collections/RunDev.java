@@ -13,25 +13,27 @@ public class RunDev {
         System.out.println("Сколько команд в проекте?");
         int capacityPt = scannerRunDev.nextInt();
         scannerRunDev.nextLine();
+        Project project = new Project(namePt, capacityPt);
 
-        System.out.println("Наименование команды:");
-        String nameTm = scannerRunDev.nextLine();
+        project.createTeams(capacityPt);
 
-        System.out.println("Команда из скольки человек?");
-        int capacityTm = scannerRunDev.nextInt();
-        scannerRunDev.nextLine();
-        Team team = new Team(nameTm, capacityTm);
 
-        Developer[] dev = new Developer[capacityTm];
-        for (int i = 0; i < capacityTm; i++) {
-            System.out.println("Введите имя:");
-//            String z = scannerRunDev.nextLine();
-            dev[i] = new Developer(scannerRunDev.nextLine());
-        }
-//        System.out.println(Arrays.toString(dev));
-        team.addToTeam(dev);
+//        Team team = new Team(nameTm, capacityTm);
+
+
+//        Developer[] dev = new Developer[capacityTm];
+//
+////        for (int j = 0; j < capacityPt; j++) {
+//            for (int i = 0; i < capacityTm; i++) {
+//                System.out.println("Введите имя:");
+//                dev[i] = new Developer(scannerRunDev.nextLine());
+//            }
+//            tm[j] = new Team(nameTm, capacityTm);
+
+//        }
+//        System.out.println(Arrays.toString(tm));
+//        team.addToTeam(dev);
         scannerRunDev.close();
-
 
 
 //        Developer developer1 = new Developer(scannerRunDev.next(), true, true,
