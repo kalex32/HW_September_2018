@@ -24,15 +24,15 @@ class Team /*extends Developer*/ {
         return team;
     }
 
-    void addToTeam(int amountOfDevs, int capacityPt) {
-        for (int j = 0; j < capacityPt; j++) {
+    void addToTeam(int amountOfDevs/*, int capacityPt*/) {
+//        for (int j = 0; j < capacityPt; j++) {
             Developer[] dev = new Developer[amountOfDevs];
             for (int i = 0; i < amountOfDevs; i++) {
                 System.out.println("Введите имя:");
                 dev[i] = new Developer(scannerTeam.nextLine());
             }
             team.addAll(Arrays.asList(dev));
-        }
+//        }
         System.out.println(toString().replace("[", "").replace("]", ""));
     }
 

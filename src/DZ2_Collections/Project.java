@@ -22,7 +22,7 @@ class Project /*extends Team*/ {
     void createTeams(int capacityPt) {
         Team[] tm = new Team[capacityPt];
         int amountOfDevs = 0;
-        for (int j = 0; j < capacityPt; j++) {
+        for (int j = 0; j < tm.length; j++) {
             System.out.println("Наименование команды:");
             String nameTm = scannerProject.nextLine();
             System.out.println("Команда из скольки человек?");
@@ -31,6 +31,8 @@ class Project /*extends Team*/ {
             tm[j] = new Team(nameTm, amountOfDevs);
         }
         project.addAll(Arrays.asList(tm));
-        tm[0].addToTeam(amountOfDevs, capacityPt);
+        for (int i = 0; i < tm.length; i++) {
+            tm[i].addToTeam(amountOfDevs/*, capacityPt*/);
+        }
     }
 }
