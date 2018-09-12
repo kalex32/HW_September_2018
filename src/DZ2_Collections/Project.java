@@ -32,7 +32,7 @@ class Project /*extends Team*/ {
         }
         project.addAll(Arrays.asList(tm));
         for (int i = 0; i < tm.length; i++) {
-            tm[i].addToTeam(amountOfDevs/*, capacityPt*/);
+            tm[i].addToTeam(amountOfDevs);
         }
     }
 }

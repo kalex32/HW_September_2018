@@ -40,6 +40,5 @@ class Team /*extends Developer*/ {
     public String toString() {
         return "Название команды: " + getNameTeam() + "\n" +
                 "Команда: " + "\n" + "\b" + getTeam();
-//                "} "/* + super.toString()*/;
     }
 }
