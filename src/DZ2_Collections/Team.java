@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class Team /*extends Developer*/ {
-    String nameTeam;
-    ArrayList<Developer> team = new ArrayList<>();
-    Scanner scannerTeam = new Scanner(System.in);
+    private String nameTeam;
+    private ArrayList<Developer> team = new ArrayList<>();
+    private Scanner scannerTeam = new Scanner(System.in);
 
 
     Team(String nameTeam, int capacityTeam) {
@@ -39,7 +39,7 @@ class Team /*extends Developer*/ {
     @Override
     public String toString() {
         return "Название команды: " + getNameTeam() + "\n" +
-                "Команда: " + "\n" +"\b"+ getTeam();
+                "Команда: " + "\n" + "\b" + getTeam();
 //                "} "/* + super.toString()*/;
     }
 }

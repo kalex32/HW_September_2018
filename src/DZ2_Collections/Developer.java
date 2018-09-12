@@ -34,7 +34,7 @@ class Developer {
     public String toString() {
         return "Developer: " +
                 "Имя = " + getNameDeveloper() + "\n" +
-                "skills: " +"\n"+
-                skills.toString()+"\n"+"\b";
+                "skills: " + "\n" +
+                skills.toString() + "\n" + "\b";
     }
 }
