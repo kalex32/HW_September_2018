@@ -29,8 +29,8 @@ class Team /*extends Developer*/ {
         for (int i = 0; i < amountOfDevs; i++) {
             System.out.println("Введите имя:");
             dev[i] = new Developer(scannerTeam.nextLine());
-            team.addAll(Arrays.asList(dev));
         }
+        team.addAll(Arrays.asList(dev));
         System.out.println(toString().replace("[", "").replace("]", ""));
     }
 
