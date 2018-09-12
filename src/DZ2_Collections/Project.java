@@ -37,7 +37,7 @@ class Project /*extends Team*/{
             tm[j] = new Team(nameTm, amountOfDevs);
         }
         project.addAll(Arrays.asList(tm));
-        tm[0].addToTeam(amountOfDevs);
+        tm[0].addToTeam(amountOfDevs, capacityPt);
     }
 
 //    @Override
