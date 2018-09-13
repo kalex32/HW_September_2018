@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Team /*extends Developer*/ {
+class Team {
     private String nameTeam;
     private ArrayList<Developer> team = new ArrayList<>();
     private Scanner scannerTeam = new Scanner(System.in);
@@ -24,16 +24,13 @@ class Team /*extends Developer*/ {
         return team;
     }
 
-    void addToTeam(int amountOfDevs/*, int capacityPt*/) {
-//        for (int j = 0; j < capacityPt; j++) {
-            Developer[] dev = new Developer[amountOfDevs];
-            for (int i = 0; i < amountOfDevs; i++) {
-                System.out.println("Введите имя:");
-                dev[i] = new Developer(scannerTeam.nextLine());
-            }
-            team.addAll(Arrays.asList(dev));
-//        }
-        System.out.println(toString().replace("[", "").replace("]", ""));
+    void addToTeam(int amountOfDevs) {
+        Developer[] dev = new Developer[amountOfDevs];
+        for (int i = 0; i < amountOfDevs; i++) {
+            System.out.println("Введите имя:");
+            dev[i] = new Developer(scannerTeam.nextLine());
+        }
+        team.addAll(Arrays.asList(dev));
     }
 
     @Override
