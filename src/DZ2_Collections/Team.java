@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class Team /*extends Developer*/ {
-    String nameTeam;
-    ArrayList<Developer> team = new ArrayList<>();
-    Scanner scannerTeam = new Scanner(System.in);
+    private String nameTeam;
+    private ArrayList<Developer> team = new ArrayList<>();
+    private Scanner scannerTeam = new Scanner(System.in);
 
 
     Team(String nameTeam, int capacityTeam) {
@@ -24,20 +24,21 @@ class Team /*extends Developer*/ {
         return team;
     }
 
-    void addToTeam(int amountOfDevs) {
-        Developer[] dev = new Developer[amountOfDevs];
-        for (int i = 0; i < amountOfDevs; i++) {
-            System.out.println("Введите имя:");
-            dev[i] = new Developer(scannerTeam.nextLine());
-        }
-        team.addAll(Arrays.asList(dev));
+    void addToTeam(int amountOfDevs/*, int capacityPt*/) {
+//        for (int j = 0; j < capacityPt; j++) {
+            Developer[] dev = new Developer[amountOfDevs];
+            for (int i = 0; i < amountOfDevs; i++) {
+                System.out.println("Введите имя:");
+                dev[i] = new Developer(scannerTeam.nextLine());
+            }
+            team.addAll(Arrays.asList(dev));
+//        }
         System.out.println(toString().replace("[", "").replace("]", ""));
     }
 
     @Override
     public String toString() {
         return "Название команды: " + getNameTeam() + "\n" +
-                "Команда: " + "\n" +"\b"+ getTeam();
-//                "} "/* + super.toString()*/;
+                "Команда: " + "\n" + "\b" + getTeam();
     }
 }
