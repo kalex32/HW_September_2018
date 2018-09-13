@@ -31,6 +31,7 @@ class Project {
             tm[j].addToTeam(amountOfDevs);
 
         }
+        scannerProject.close();
         project.addAll(Arrays.asList(tm));
         System.out.println(toString().replace("[", "").replace("]", ""));
     }

@@ -1,5 +1,6 @@
 package DZ2_Collections;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class RunDev {
@@ -10,11 +11,18 @@ public class RunDev {
         String namePt = scannerRunDev.nextLine();
 
         System.out.println("Сколько команд в проекте?");
-        int capacityPt = scannerRunDev.nextInt();
-        scannerRunDev.nextLine();
-        Project project = new Project(namePt, capacityPt);
+        try {
+            int capacityPt = scannerRunDev.nextInt();
+            scannerRunDev.nextLine();
+            Project project = new Project(namePt, capacityPt);
 
-        project.createTeams(capacityPt);
+
+            project.createTeams(capacityPt);
+        } catch (InputMismatchException e) {
+            System.out.println("На вопрос \"Сколько?\" введите целое число");
+
+        }
+
 
         scannerRunDev.close();
     }

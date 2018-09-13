@@ -30,6 +30,7 @@ class Team {
             System.out.println("Введите имя:");
             dev[i] = new Developer(scannerTeam.nextLine());
         }
+        scannerTeam.close();
         team.addAll(Arrays.asList(dev));
     }
 
