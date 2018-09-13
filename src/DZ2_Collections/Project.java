@@ -21,18 +21,16 @@ class Project /*extends Team*/ {
 
     void createTeams(int capacityPt) {
         Team[] tm = new Team[capacityPt];
-        int amountOfDevs = 0;
         for (int j = 0; j < tm.length; j++) {
             System.out.println("Наименование команды:");
             String nameTm = scannerProject.nextLine();
             System.out.println("Команда из скольки человек?");
-            amountOfDevs = scannerProject.nextInt();
+           int amountOfDevs = scannerProject.nextInt();
             scannerProject.nextLine();
             tm[j] = new Team(nameTm, amountOfDevs);
+            tm[j].addToTeam(amountOfDevs);
+
         }
         project.addAll(Arrays.asList(tm));
-        for (int i = 0; i < tm.length; i++) {
-            tm[i].addToTeam(amountOfDevs);
-        }
     }
 }
