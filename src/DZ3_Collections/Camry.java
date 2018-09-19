@@ -1,8 +1,10 @@
 package DZ3_Collections;
 
 class Camry implements Toyota{
-    static void createCamry() {
-        Toyota camry = new Camry();
-        Toyota.toyota(camry);
+
+    @Override
+    public String toString() {
+        String NAME = "Camry";
+        return "Toyota " + NAME;
     }
 }

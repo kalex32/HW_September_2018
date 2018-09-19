@@ -1,8 +1,10 @@
 package DZ3_Collections;
 
 class Avensis implements Toyota{
-   static void createAvensis() {
-        Toyota avensis = new Avensis();
-        Toyota.toyota(avensis);
+
+    @Override
+    public String toString() {
+        String NAME = "Avensis";
+        return "Toyota " + NAME;
     }
 }
