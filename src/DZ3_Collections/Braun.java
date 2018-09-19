@@ -1,6 +1,6 @@
 package DZ3_Collections;
 
-class Braun implements ProcterAndGamble{
+class Braun implements ProcterAndGamble {
 
     @Override
     public String toString() {

@@ -1,6 +1,6 @@
 package DZ3_Collections;
 
-class Avensis implements Toyota{
+class Avensis implements Toyota {
 
     @Override
     public String toString() {

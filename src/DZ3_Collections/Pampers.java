@@ -1,6 +1,6 @@
 package DZ3_Collections;
 
-class Pampers implements ProcterAndGamble{
+class Pampers implements ProcterAndGamble {
 
     @Override
     public String toString() {
