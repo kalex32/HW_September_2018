@@ -3,9 +3,6 @@ package DZ3_Collections;
 import java.util.ArrayList;
 
 interface Toyota {
-    default void find(){
-        class
-    }
 
     static ArrayList<Toyota> toyota() {
         ArrayList<Toyota> cars = new ArrayList<>();
