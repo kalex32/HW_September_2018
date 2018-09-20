@@ -6,6 +6,7 @@ class Braun implements ProcterAndGamble {
     public String toString() {
         String typeOfProduct = "электробритва";
         String tradeMark = "Braun";
-        return typeOfProduct + " " + tradeMark;
+        int price = 2385;
+        return typeOfProduct + " " + tradeMark+", цена "+ price;
     }
 }

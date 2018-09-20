@@ -1,10 +1,12 @@
-package DZ3_Collections;
+package Test;
 
-class Avensis extends Toyota {
+//import DZ3_Collections.Toyota;
+
+class Avensis{
     private String name;
 
-    Avensis() {
-        this.name = "Avensis";
+    Avensis(String name) {
+        this.name = name;
     }
 
     String getName() {

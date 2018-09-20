@@ -1,5 +1,6 @@
 package DZ3_Collections;
 
+import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -16,6 +17,7 @@ class Menu {
             switch (scannerMenu.nextInt()) {
                 case 1:
                     System.out.println(Toyota.toyota().toString());
+                    Collections.sort(Toyota.toyota(), new SortedByName());
                     break;
                 case 2:
                     System.out.println(ProcterAndGamble.procterAndGamble().toString());

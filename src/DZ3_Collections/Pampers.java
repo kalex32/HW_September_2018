@@ -6,6 +6,7 @@ class Pampers implements ProcterAndGamble {
     public String toString() {
         String typeOfProduct = "подгузники";
         String tradeMark = "Pampers";
-        return typeOfProduct + " " + tradeMark;
+        int price = 239;
+        return typeOfProduct + " " + tradeMark+", цена "+ price;
     }
 }

@@ -6,6 +6,7 @@ class Ariel implements ProcterAndGamble {
     public String toString() {
         String typeOfProduct = "стиральный порошок";
         String tradeMark = "Ariel";
-        return typeOfProduct + " " + tradeMark;
+        int price = 29;
+        return typeOfProduct + " " + tradeMark+", цена "+ price;
     }
 }

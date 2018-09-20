@@ -1,10 +1,14 @@
 package DZ3_Collections;
 
-class Rav4 implements Toyota {
+class Rav4 extends Toyota {
+    private String name = "Rav4";
+
+    String getName() {
+        return name;
+    }
 
     @Override
     public String toString() {
-        String NAME = "Rav4";
-        return "Toyota " + NAME;
+        return "Toyota " + name;
     }
 }
