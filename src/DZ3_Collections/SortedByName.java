@@ -1,9 +1,8 @@
 package DZ3_Collections;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 
-public class SortedByName implements Comparator<Toyota> {
+class SortedByName implements Comparator<Toyota> {
 
 
     @Override
