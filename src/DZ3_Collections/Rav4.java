@@ -1,7 +1,11 @@
 package DZ3_Collections;
 
 class Rav4 extends Toyota {
-    private String name = "Rav4";
+    private String name;
+
+    Rav4(/*String name*/) {
+        this.name  = "Rav4";
+    }
 
     String getName() {
         return name;

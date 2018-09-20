@@ -1,7 +1,11 @@
 package DZ3_Collections;
 
 class Camry extends Toyota {
-    private String name = "Camry";
+    private String name;
+
+    Camry(/*String name*/) {
+        this.name = "Camry";
+    }
 
     String getName() {
         return name;

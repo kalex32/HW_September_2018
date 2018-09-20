@@ -17,7 +17,10 @@ class Menu {
             switch (scannerMenu.nextInt()) {
                 case 1:
                     System.out.println(Toyota.toyota().toString());
-                    Collections.sort(Toyota.toyota(), new SortedByName());
+                    System.out.println();
+                    for (Toyota i: Toyota.toyotaSortedByName()) {
+                        System.out.println(i.toString());
+                    }
                     break;
                 case 2:
                     System.out.println(ProcterAndGamble.procterAndGamble().toString());
