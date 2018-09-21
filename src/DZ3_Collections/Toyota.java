@@ -31,8 +31,8 @@ class Toyota {
         cars.add(rav4);
         cars.add(corolla);
         cars.add(camry);
-//        SortedByPrice sortedByPrice = new SortedByPrice();
-//        Collections.sort(cars,sortedByPrice);
+        SortedByPrice sortedByPrice = new SortedByPrice();
+        cars.sort(sortedByPrice);
         return cars;
     }
 
