@@ -22,7 +22,7 @@ class Menu {
                             "3. Сортированный по цене");
                     switch (scannerMenu.nextInt()) {
                         case 1:
-                            for (Toyota i : Toyota.cars) {
+                            for (Toyota i : Toyota.toyotaUnSorted()) {
                                 System.out.println(i.toString());
                             }
                             System.out.println();
@@ -42,6 +42,7 @@ class Menu {
                         default:
                             break;
                     }
+                    break;
                 case 2:
                     System.out.println(ProcterAndGamble.procterAndGamble().toString());
                     break;

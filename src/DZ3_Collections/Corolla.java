@@ -19,6 +19,6 @@ class Corolla extends Toyota {
 
     @Override
     public String toString() {
-        return "Toyota " + getName() + " цена - " + getPrice() + " грн.";
+        return "Toyota " + name + " цена - " + getPrice() + " грн.";
     }
 }
