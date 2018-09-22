@@ -2,7 +2,7 @@ package DZ3_Collections;
 
 import java.util.Comparator;
 
-class SortedByPrice/*<T>*/ implements Comparator<Vendors> {
+class SortedByPrice implements Comparator<Vendors> {
 
     @Override
     public int compare(Vendors o1, Vendors o2) {

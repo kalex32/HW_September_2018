@@ -26,6 +26,6 @@ class Braun implements ProcterAndGamble {
 
     @Override
     public String toString() {
-        return getTypeOfProduct() + " " + getName() + ", цена " + getPrice();
+        return getTypeOfProduct() + " " + getName() + ", цена " + getPrice() + " грн.";
     }
 }
