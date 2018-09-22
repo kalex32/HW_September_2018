@@ -3,9 +3,12 @@ package DZ3_Collections;
 import java.util.ArrayList;
 import java.util.Collections;
 
-class Toyota {
+interface Toyota {
+    String getName();
 
-    static ArrayList<Toyota> toyotaUnSorted(){
+    int getPrice();
+
+    static ArrayList<Toyota> toyotaUnSorted() {
         ArrayList<Toyota> cars = new ArrayList<>();
         cars.add(new Rav4());
         cars.add(new Corolla());
@@ -25,12 +28,9 @@ class Toyota {
 
     static ArrayList<Toyota> toyotaSortedByPrice() {
         ArrayList<Toyota> cars = new ArrayList<>();
-        Toyota rav4 = new Rav4();
-        Toyota corolla = new Corolla();
-        Toyota camry = new Camry();
-        cars.add(rav4);
-        cars.add(corolla);
-        cars.add(camry);
+        cars.add(new Rav4());
+        cars.add(new Corolla());
+        cars.add(new Camry());
         SortedByPrice sortedByPrice = new SortedByPrice();
         cars.sort(sortedByPrice);
         return cars;

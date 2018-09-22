@@ -1,6 +1,6 @@
 package DZ3_Collections;
 
-class Rav4 extends Toyota {
+class Rav4 implements Toyota {
     private String name;
     private int price;
 
@@ -9,11 +9,11 @@ class Rav4 extends Toyota {
         this.price = 632_400;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    int getPrice() {
+    public int getPrice() {
         return price;
     }
 

@@ -1,6 +1,6 @@
 package DZ3_Collections;
 
-class Corolla extends Toyota {
+class Corolla implements Toyota {
     private String name;
     private int price;
 
@@ -9,16 +9,16 @@ class Corolla extends Toyota {
         this.price = 459_270;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    int getPrice() {
+    public int getPrice() {
         return price;
     }
 
     @Override
     public String toString() {
-        return "Toyota " + name + " цена - " + getPrice() + " грн.";
+        return "Toyota " + getName() + " цена - " + getPrice() + " грн.";
     }
 }

@@ -2,7 +2,7 @@ package Test;
 
 //import DZ3_Collections.Toyota;
 
-class Avensis {
+class Avensis implements Toyota{
     private String name;
     private int price;
 
@@ -11,11 +11,11 @@ class Avensis {
         this.price = price;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    int getPrice() {
+    public int getPrice() {
         return price;
     }
 

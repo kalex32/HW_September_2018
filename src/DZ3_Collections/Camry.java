@@ -1,6 +1,6 @@
 package DZ3_Collections;
 
-class Camry extends Toyota {
+class Camry implements Toyota {
     private String name;
     private int price;
 
@@ -9,11 +9,11 @@ class Camry extends Toyota {
         this.price = 809_500;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    int getPrice() {
+    public int getPrice() {
         return price;
     }
 

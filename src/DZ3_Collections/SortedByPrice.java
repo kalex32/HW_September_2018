@@ -3,14 +3,12 @@ package DZ3_Collections;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-class SortedByPrice<T> implements Comparator<T> {
+class SortedByPrice/*<T>*/ implements Comparator<Toyota> {
 
     @Override
-    public int compare(T o1, T o2) {
-        int price1 = o1.getClass().
-        int price2 = o2.getClass().getModifiers();
-        if (price1 == price2) return 0;
-        if (price1 > price2) return 1;
+    public int compare(Toyota o1, Toyota o2) {
+        if (o1.getPrice() == o2.getPrice()) return 0;
+        if (o2.getPrice() > o2.getPrice()) return 1;
         else return -1;
     }
 }
