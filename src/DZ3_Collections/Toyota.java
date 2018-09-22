@@ -2,7 +2,7 @@ package DZ3_Collections;
 
 import java.util.ArrayList;
 
-interface Toyota {
+interface Toyota extends Vendors{
 
     String getName();
 

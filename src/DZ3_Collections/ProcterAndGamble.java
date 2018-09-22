@@ -2,7 +2,7 @@ package DZ3_Collections;
 
 import java.util.ArrayList;
 
-interface ProcterAndGamble {
+interface ProcterAndGamble extends Vendors{
 
     String getName();
 
@@ -27,7 +27,7 @@ interface ProcterAndGamble {
         return tradeMarks;
     }
 
-    static ArrayList<Toyota> procterAndGambleSortedByPrice() {
+    static ArrayList<ProcterAndGamble> procterAndGambleSortedByPrice() {
         ArrayList<ProcterAndGamble> tradeMarks = new ArrayList<>();
         tradeMarks.add(new Braun());
         tradeMarks.add(new Pampers());

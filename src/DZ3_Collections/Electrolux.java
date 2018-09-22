@@ -2,7 +2,7 @@ package DZ3_Collections;
 
 import java.util.ArrayList;
 
-interface Electrolux {
+interface Electrolux /*extends Vendors*/{
 
     static ArrayList<Electrolux> electrolux() {
         ArrayList<Electrolux> typeOfProduct = new ArrayList<>();

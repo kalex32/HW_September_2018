@@ -3,12 +3,12 @@ package DZ3_Collections;
 class Braun implements ProcterAndGamble {
 
     private String typeOfProduct;
-    private String tradeMark;
+    private String name;
     private int price;
 
     Braun() {
         this.typeOfProduct = "электробритва";
-        this.tradeMark = "Braun";
+        this.name = "Braun";
         this.price = 2385;
     }
 
@@ -16,8 +16,8 @@ class Braun implements ProcterAndGamble {
         return typeOfProduct;
     }
 
-    public String getTradeMark() {
-        return tradeMark;
+    public String getName() {
+        return name;
     }
 
     public int getPrice() {
@@ -26,6 +26,6 @@ class Braun implements ProcterAndGamble {
 
     @Override
     public String toString() {
-        return getTypeOfProduct() + " " + getTradeMark() + ", цена " + getPrice();
+        return getTypeOfProduct() + " " + getName() + ", цена " + getPrice();
     }
 }
