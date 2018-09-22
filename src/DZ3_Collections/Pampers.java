@@ -2,11 +2,30 @@ package DZ3_Collections;
 
 class Pampers implements ProcterAndGamble {
 
+    private String typeOfProduct;
+    private String tradeMark;
+    private int price;
+
+    Pampers() {
+        this.typeOfProduct = "подгузники";
+        this.tradeMark = "Pampers";
+        this.price = 239;
+    }
+
+    private String getTypeOfProduct() {
+        return typeOfProduct;
+    }
+
+    public String getTradeMark() {
+        return tradeMark;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
-        String typeOfProduct = "подгузники";
-        String tradeMark = "Pampers";
-        int price = 239;
-        return typeOfProduct + " " + tradeMark+", цена "+ price;
+        return getTypeOfProduct() + " " + getTradeMark() + ", цена " + getPrice();
     }
 }

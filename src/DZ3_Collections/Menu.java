@@ -44,7 +44,32 @@ class Menu {
                     }
                     break;
                 case 2:
-                    System.out.println(ProcterAndGamble.procterAndGamble().toString());
+                    System.out.println("Список товаров представить:\n" +
+                            "1. В порядке добавления\n" +
+                            "2. Сортированный по имени\n" +
+                            "3. Сортированный по цене");
+                    switch (scannerMenu.nextInt()) {
+                        case 1:
+                            for (ProcterAndGamble i : ProcterAndGamble.procterAndGambleUnSorted()) {
+                                System.out.println(i.toString());
+                            }
+                            System.out.println();
+                            break;
+                        case 2:
+                            for (ProcterAndGamble i : ProcterAndGamble.procterAndGambleSortedByName()) {
+                                System.out.println(i.toString());
+                            }
+                            System.out.println();
+                            break;
+                        case 3:
+                            for (ProcterAndGamble i : ProcterAndGamble.procterAndGambleSortedByPrice()) {
+                                System.out.println(i.toString());
+                            }
+                            System.out.println();
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 3:
                     System.out.println(Electrolux.electrolux().toString());

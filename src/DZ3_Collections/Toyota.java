@@ -1,9 +1,9 @@
 package DZ3_Collections;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 interface Toyota {
+
     String getName();
 
     int getPrice();
