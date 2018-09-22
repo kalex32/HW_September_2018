@@ -29,8 +29,8 @@ interface Toyota {
     static ArrayList<Toyota> toyotaSortedByPrice() {
         ArrayList<Toyota> cars = new ArrayList<>();
         cars.add(new Rav4());
-        cars.add(new Corolla());
         cars.add(new Camry());
+        cars.add(new Corolla());
         SortedByPrice sortedByPrice = new SortedByPrice();
         cars.sort(sortedByPrice);
         return cars;
