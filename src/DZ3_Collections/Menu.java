@@ -15,10 +15,7 @@ class Menu {
                         "4. Выход");
                 switch (scannerMenu.nextInt()) {
                     case 1:
-                        System.out.println("Список товаров представить:\n" +
-                                "1. В порядке добавления\n" +
-                                "2. Сортированный по имени\n" +
-                                "3. Сортированный по цене");
+                        secondMenu();
                         switch (scannerMenu.nextInt()) {
                             case 1:
                                 for (Toyota i : Toyota.toyotaUnSorted()) {
@@ -43,10 +40,7 @@ class Menu {
                         }
                         break;
                     case 2:
-                        System.out.println("Список товаров представить:\n" +
-                                "1. В порядке добавления\n" +
-                                "2. Сортированный по имени\n" +
-                                "3. Сортированный по цене");
+                        secondMenu();
                         switch (scannerMenu.nextInt()) {
                             case 1:
                                 for (ProcterAndGamble i : ProcterAndGamble.procterAndGambleUnSorted()) {
@@ -71,10 +65,7 @@ class Menu {
                         }
                         break;
                     case 3:
-                        System.out.println("Список товаров представить:\n" +
-                                "1. В порядке добавления\n" +
-                                "2. Сортированный по имени\n" +
-                                "3. Сортированный по цене");
+                        secondMenu();
                         switch (scannerMenu.nextInt()) {
                             case 1:
                                 for (Electrolux i : Electrolux.electroluxUnSorted()) {
@@ -108,5 +99,12 @@ class Menu {
         } catch (InputMismatchException e) {
             mainMenu();
         }
+    }
+
+    void secondMenu(){
+        System.out.println("Список товаров представить:\n" +
+                "1. В порядке добавления\n" +
+                "2. Сортированный по имени\n" +
+                "3. Сортированный по цене");
     }
 }
