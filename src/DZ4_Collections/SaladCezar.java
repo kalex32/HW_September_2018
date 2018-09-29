@@ -8,7 +8,7 @@ class SaladCezar implements Salads{
 
     SaladCezar() {
         this.nameSalad = "Цезарь";
-        this.descriptionSalad = "(курица, яйцо перепелиное, салат айсберг, томаты, сыр пармезан)";
+        this.descriptionSalad = "курица, яйцо перепелиное, салат айсберг, томаты, сыр пармезан";
         this.weight = 210;
         this.price = 90;
     }
@@ -33,6 +33,6 @@ class SaladCezar implements Salads{
     @Override
     public String toString() {
         return "Салат "+getNameSalad()+", ("+getDescriptionSalad()+"), \n" +
-                +getWeight()+", цена - "+getPrice()+" грн.";
+                +getWeight() + " гр."+", цена - "+getPrice()+" грн.";
     }
 }

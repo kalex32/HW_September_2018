@@ -19,8 +19,10 @@ class Menu {
                     "4. Пиво ");
             switch (scannerMainMenu.nextInt()){
                 case 1:
-                    MenuSalads.menuSalads();
+                    SaladsMenu.saladsMenu();
                     switch (scannerMainMenu.nextInt()){
+                        case 1:
+                            SaladsMenu.detailsOfSalads(SaladsMenu.saladsMenu(),0);
 
                     }
             }
