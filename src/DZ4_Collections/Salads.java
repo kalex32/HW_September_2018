@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
-interface Salads{
+interface Salads extends Dishes{
 
     String getNameSalad();
 
