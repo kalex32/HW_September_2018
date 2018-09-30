@@ -1,24 +1,21 @@
 package DZ4_Collections;
 
-import java.util.ArrayList;
+import java.util.*;
 
 class SaladsMenu {
-    static ArrayList saladsMenu() {
-        ArrayList<Salads> salads = new ArrayList<>();
-        salads.add(new SaladCezar());
-        salads.add(new SaladGreenWithSalmon());
-        salads.add(new SaladWithTongue());
-        return salads;
-    }
 
-    static void printSaladsMenu(ArrayList<Salads> salads){
+    static void printSaladsMenu(LinkedHashSet<Salads> salads){
+        List<Salads> saladsList = new ArrayList<>(salads);
         System.out.println("Выбираем салат:");
-        for (int i = 0; i < salads.size(); i++) {
-            System.out.println(i + 1 + ". " + salads.get(i).getNameSalad());
+        for (int i = 0; i < saladsList.size(); i++) {
+            System.out.println(i + 1 + ". " + saladsList.get(i).getNameSalad());
         }
+
+
     }
 
-    static void detailsOfSalads(ArrayList salads, int i){
-        System.out.println(salads.get(i).toString());
+    static void detailsOfSalads(LinkedHashSet salads, int i){
+        List<Salads> saladsList = new ArrayList<>(salads);
+        System.out.println(saladsList.get(i).toString());
     }
 }
