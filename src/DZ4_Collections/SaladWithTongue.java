@@ -1,28 +1,28 @@
 package DZ4_Collections;
 
 public class SaladWithTongue implements Salads {
-    private String nameSalad;
+    private String name;
     private String descriptionSalad;
     private int weight;
     private int price;
 
     SaladWithTongue() {
-        this.nameSalad = "из языка с томатами и шампиньонами";
+        this.name = "из языка с томатами и шампиньонами";
         this.descriptionSalad = "язык, томаты, шампиньоны свежие, бальзамическая заправка";
         this.weight = 210;
         this.price = 115;
     }
 
     @Override
-    public String getNameSalad() {
-        return nameSalad;
+    public String getName() {
+        return name;
     }
 
     int getWeight() {
         return weight;
     }
 
-    int getPrice() {
+    public int getPrice() {
         return price;
     }
 
@@ -32,7 +32,7 @@ public class SaladWithTongue implements Salads {
 
     @Override
     public String toString() {
-        return "Салат " + getNameSalad() + ", (" + getDescriptionSalad() + "), \n" +
+        return "Салат " + getName() + ", (" + getDescriptionSalad() + "), \n" +
                 +getWeight() + " гр." + ", цена - " + getPrice() + " грн.";
     }
 }

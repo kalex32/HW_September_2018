@@ -8,7 +8,7 @@ class SaladsMenu {
         List<Salads> saladsList = new ArrayList<>(salads);
         System.out.println("Выбираем салат:");
         for (int i = 0; i < saladsList.size(); i++) {
-            System.out.println(i + 1 + ". " + saladsList.get(i).getNameSalad());
+            System.out.println(i + 1 + ". " + saladsList.get(i).getName());
         }
 
 

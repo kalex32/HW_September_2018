@@ -11,16 +11,20 @@ class Order {
         this.order = new LinkedHashSet<>();
     }
 
-    void addToOrder(LinkedHashSet dishes, int i){
+    void addToOrder(LinkedHashSet dishes, int i) {
         List<Dishes> dishesList = new ArrayList<>(dishes);
         order.add(dishesList.get(i));
     }
 
-    void printOrder(){
+    void printOrder() {
         System.out.println("Ваш заказ:");
-        for (Dishes y:order) {
+        int sum = 0;
+        for (Dishes y : order) {
             System.out.println(y.toString());
+            sum += y.getPrice();
         }
+        System.out.println();
+        System.out.println("Сумма Вашего заказа: " + sum);
         System.out.println();
     }
 }

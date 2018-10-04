@@ -6,7 +6,8 @@ import java.util.TreeSet;
 
 interface Salads extends Dishes{
 
-    String getNameSalad();
+    String getName();
+    int getPrice();
 
     static LinkedHashSet saladsMenu() {
         LinkedHashSet<Salads> salads = new LinkedHashSet<>();
