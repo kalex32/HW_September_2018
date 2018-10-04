@@ -4,6 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Menu {
+    private Scanner scannerMainMenu = new Scanner(System.in);
+
     void welcome() {
         System.out.println("Буквально впиться зубами в сочный мясной стейк и забыть обо всем на свете. \n" +
                 "И в первую очередь – о голоде, утолить который можно только с качественно приготовленными блюдами. \n" +
@@ -11,8 +13,7 @@ class Menu {
         mainMenu();
     }
 
-    void mainMenu() {
-        Scanner scannerMainMenu = new Scanner(System.in);
+    private void mainMenu() {
         Order order = new Order();
 
         System.out.println();
@@ -34,33 +35,32 @@ class Menu {
                         int h = scannerMainMenu.nextInt();
                         switch (h) {
                             case 1:
-                                SaladsMenu.detailsOfSalads(Salads.saladsMenu(), h - 1);
-                                System.out.println();
-                                System.out.println("Берем? Y-\"Да\"/Any key - \"Нет\"");
-                                if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
-                                    order.addToOrder(Salads.saladsMenu(), h - 1);
-                                }
+                                choiceOfSalad(order, h);
                                 break;
                             case 2:
-                                SaladsMenu.detailsOfSalads(Salads.saladsMenu(), h - 1);
-                                System.out.println();
-                                System.out.println("Берем? Y-\"Да\"/Any key - \"Нет\"");
-                                if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
-                                    order.addToOrder(Salads.saladsMenu(), h - 1);
-                                }
+                                choiceOfSalad(order, h);
                                 break;
                             case 3:
-                                SaladsMenu.detailsOfSalads(Salads.saladsMenu(), h - 1);
-                                System.out.println();
-                                System.out.println("Берем? Y-\"Да\"/Any key - \"Нет\"");
-                                if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
-                                    order.addToOrder(Salads.saladsMenu(), h - 1);
-                                }
+                                choiceOfSalad(order, h);
                                 break;
                         }
                 }
             }
         } catch (InputMismatchException e) {
+        }
+    }
+
+    private void choiceOfSalad(Order order, int h){
+        SaladsMenu.detailsOfSalads(Salads.saladsMenu(), h - 1);
+        System.out.println();
+        System.out.println("Берем? Y-\"Да\"/Any key - \"Нет\"");
+        if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
+            order.addToOrder(Salads.saladsMenu(), h - 1);
+        }
+        System.out.println();
+        System.out.println("Желаете взглянуть на Ваш заказ?  Y-\"Да\"/Any key - \"Нет\"");
+        if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
+            order.printOrder();
         }
     }
 }
