@@ -36,16 +36,26 @@ class Menu {
                             case 1:
                                 SaladsMenu.detailsOfSalads(Salads.saladsMenu(), h - 1);
                                 System.out.println();
-                                System.out.println("Берем? Y/Any key");
-                                if (scannerMainMenu.next().equals("Y")) {
+                                System.out.println("Берем? Y-\"Да\"/Any key - \"Нет\"");
+                                if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
                                     order.addToOrder(Salads.saladsMenu(), h - 1);
                                 }
                                 break;
                             case 2:
                                 SaladsMenu.detailsOfSalads(Salads.saladsMenu(), h - 1);
+                                System.out.println();
+                                System.out.println("Берем? Y-\"Да\"/Any key - \"Нет\"");
+                                if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
+                                    order.addToOrder(Salads.saladsMenu(), h - 1);
+                                }
                                 break;
                             case 3:
                                 SaladsMenu.detailsOfSalads(Salads.saladsMenu(), h - 1);
+                                System.out.println();
+                                System.out.println("Берем? Y-\"Да\"/Any key - \"Нет\"");
+                                if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
+                                    order.addToOrder(Salads.saladsMenu(), h - 1);
+                                }
                                 break;
                         }
                 }
