@@ -6,9 +6,10 @@ import java.util.List;
 
 class Order {
     LinkedHashSet<Dishes> order;
-
+    int discount;
     Order() {
         this.order = new LinkedHashSet<>();
+        this.discount = 0;
     }
 
     void addToOrder(LinkedHashSet dishes, int i) {
@@ -30,7 +31,6 @@ class Order {
     }
 
     void discountOnOrder(int sum) {
-        int discount = 0;
         if (sum > 500 && sum < 1000) {
             discount = 5;
             printDiscountOrder(sum, discount);
@@ -38,7 +38,11 @@ class Order {
             discount = 10;
             printDiscountOrder(sum, discount);
         } else if (sum > 1500 && sum < 2000) {
+            discount = 15;
             printDiscountOrder(sum, discount);
+        } else {
+            System.out.println("Чтобы получить скидку, надо заказать еще немного!");
+            System.out.println();
         }
     }
 
