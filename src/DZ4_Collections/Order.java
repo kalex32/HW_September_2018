@@ -5,11 +5,14 @@ import java.util.LinkedHashSet;
 import java.util.List;
 
 class Order {
-    LinkedHashSet<Dishes> order;
+    ArrayList<Dishes> order;
+    double sumOrderWithDiscount;
     int discount;
+
     Order() {
-        this.order = new LinkedHashSet<>();
+        this.order = new ArrayList<>();
         this.discount = 0;
+        this.sumOrderWithDiscount = 0;
     }
 
     void addToOrder(LinkedHashSet dishes, int i) {
@@ -18,37 +21,38 @@ class Order {
     }
 
     void printOrder() {
+        double sumOrder = 0;
         System.out.println("Ваш заказ:");
-        int sum = 0;
         for (Dishes y : order) {
             System.out.println(y.toString());
-            sum += y.getPrice();
+            sumOrder += y.getPrice();
         }
         System.out.println();
-        System.out.println("Сумма Вашего заказа: " + sum + " грн.");
+        System.out.println("Сумма Вашего заказа: " + sumOrder + " грн.");
         System.out.println();
-        discountOnOrder(sum);
+        discountOnOrder(sumOrder);
     }
 
-    void discountOnOrder(int sum) {
-        if (sum > 500 && sum < 1000) {
+    void discountOnOrder(double sumOrder) {
+        if (sumOrder > 500 && sumOrder < 1000) {
             discount = 5;
-            printDiscountOrder(sum, discount);
-        } else if (sum > 1000 && sum < 1500) {
+            printDiscountOrder(sumOrder);
+        } else if (sumOrder >= 1000 && sumOrder <= 1500) {
             discount = 10;
-            printDiscountOrder(sum, discount);
-        } else if (sum > 1500 && sum < 2000) {
+            printDiscountOrder(sumOrder);
+        } else if (sumOrder > 1500) {
             discount = 15;
-            printDiscountOrder(sum, discount);
+            printDiscountOrder(sumOrder);
         } else {
             System.out.println("Чтобы получить скидку, надо заказать еще немного!");
             System.out.println();
         }
     }
 
-    void printDiscountOrder(int sum, int discount) {
+    void printDiscountOrder(double sumOrder) {
+        sumOrderWithDiscount = sumOrder - (sumOrder / 100 * discount);
         System.out.println("Ваша скидка - " + discount + "%\n" +
-                "Сумма Вашего заказа со скидкой - " + (sum - (sum / 100 * discount)) + " грн.");
+                "Сумма Вашего заказа со скидкой - " + sumOrderWithDiscount + " грн.");
         System.out.println();
     }
 }
