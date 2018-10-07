@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Menu {
-    private Scanner scannerMainMenu = new Scanner(System.in);
+    private static Scanner scannerMainMenu = new Scanner(System.in);
 
     void welcome() {
         System.out.println("Буквально впиться зубами в сочный мясной стейк и забыть обо всем на свете. \n" +
@@ -62,5 +62,9 @@ class Menu {
         if (scannerMainMenu.next().equalsIgnoreCase("Y")) {
             order.printOrder();
         }
+    }
+    static int amountOfDishes(){
+        System.out.println("Сколько порций?");
+        return scannerMainMenu.nextInt();
     }
 }

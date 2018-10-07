@@ -1,13 +1,13 @@
 package DZ4_Collections;
 
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.TreeSet;
 
 interface Salads extends Dishes{
 
     String getName();
     int getPrice();
+    void setAmount(int amount);
+    int getAmount();
 
     static LinkedHashSet saladsMenu() {
         LinkedHashSet<Salads> salads = new LinkedHashSet<>();

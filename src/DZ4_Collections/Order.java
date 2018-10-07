@@ -18,6 +18,7 @@ class Order {
     void addToOrder(LinkedHashSet dishes, int i) {
         List<Dishes> dishesList = new ArrayList<>(dishes);
         order.add(dishesList.get(i));
+        dishesList.get(i).setAmount(Menu.amountOfDishes());
     }
 
     void printOrder() {
@@ -25,7 +26,7 @@ class Order {
         System.out.println("Ваш заказ:");
         for (Dishes y : order) {
             System.out.println(y.toString());
-            sumOrder += y.getPrice();
+            sumOrder +=(y.getAmount()* y.getPrice());
         }
         System.out.println();
         System.out.println("Сумма Вашего заказа: " + sumOrder + " грн.");
