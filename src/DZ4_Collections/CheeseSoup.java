@@ -1,18 +1,18 @@
 package DZ4_Collections;
 
-class SaladCezar implements Salads {
+class CheeseSoup implements MainCourses{
     private String name;
-    private String descriptionSalad;
+    private String descriptionSoup;
     private int weight;
     private int amount;
     private int price;
 
-    SaladCezar() {
-        this.name = "Цезарь";
-        this.descriptionSalad = "курица, яйцо перепелиное, салат айсберг, томаты, сыр пармезан";
-        this.weight = 210;
+    CheeseSoup() {
+        this.name = "Сырный";
+        this.descriptionSoup = "густой сливочно-сырный суп с копченой курицей, белыми грибами и морковью";
+        this.weight = 270;
         this.amount = 0;
-        this.price = 90;
+        this.price = 118;
     }
 
     @Override
@@ -36,13 +36,13 @@ class SaladCezar implements Salads {
         return price;
     }
 
-    private String getDescriptionSalad() {
-        return descriptionSalad;
+    private String getDescriptionSoup() {
+        return descriptionSoup;
     }
 
     @Override
     public String toString() {
-        return "Салат " + getName() + ", (" + getDescriptionSalad() + "), \n" +
+        return "Суп " + getName() + ", (" + getDescriptionSoup() + "), \n" +
                 +getWeight() + " гр." + ", цена - " + getPrice() + " грн. \n" +
                 "кол-во порций: " + getAmount();
     }

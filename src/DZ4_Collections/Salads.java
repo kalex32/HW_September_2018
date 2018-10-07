@@ -2,11 +2,14 @@ package DZ4_Collections;
 
 import java.util.LinkedHashSet;
 
-interface Salads extends Dishes{
+interface Salads extends Dishes {
 
     String getName();
+
     int getPrice();
+
     void setAmount(int amount);
+
     int getAmount();
 
     static LinkedHashSet saladsMenu() {
@@ -16,13 +19,4 @@ interface Salads extends Dishes{
         salads.add(new SaladWithTongue());
         return salads;
     }
-//    String getDescriptionSalad();
-//    int getWeight();
-//    int getPrice();
-
-//    @Override
-//    default String toStringSalads() {
-//        return "Салат "+getNameSalad()+", ("+getDescriptionSalad()+"), \n" +
-//                +getWeight()+", цена - "+getPrice()+" грн.";
-//    }
 }
