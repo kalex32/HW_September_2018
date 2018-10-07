@@ -1,6 +1,6 @@
 package DZ4_Collections;
 
-class VegetablesOnGrill implements MainCourses{
+class VegetablesOnGrill implements MainCourses {
     private String name;
     private String descriptionSoup;
     private int weight;

@@ -1,6 +1,8 @@
 package DZ4_Collections;
 
-interface MainCourses extends Dishes{
+import java.util.LinkedHashSet;
+
+interface MainCourses extends Dishes {
     String getName();
 
     int getPrice();
@@ -8,4 +10,12 @@ interface MainCourses extends Dishes{
     void setAmount(int amount);
 
     int getAmount();
+
+    static LinkedHashSet mainCoursesMenu() {
+        LinkedHashSet<MainCourses> mainCourses = new LinkedHashSet<>();
+        mainCourses.add(new CheeseSoup());
+        mainCourses.add(new ShashlickCaucasian());
+        mainCourses.add(new VegetablesOnGrill());
+        return mainCourses;
+    }
 }

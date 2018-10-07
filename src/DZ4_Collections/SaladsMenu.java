@@ -4,7 +4,7 @@ import java.util.*;
 
 class SaladsMenu {
 
-    static void printSaladsMenu(LinkedHashSet<Salads> salads){
+    static void printSaladsMenu(LinkedHashSet<Salads> salads) {
         List<Salads> saladsList = new ArrayList<>(salads);
         System.out.println("Выбираем салат:");
         for (int i = 0; i < saladsList.size(); i++) {
@@ -14,7 +14,7 @@ class SaladsMenu {
 
     }
 
-    static void detailsOfSalads(LinkedHashSet salads, int i){
+    static void detailsOfSalads(LinkedHashSet salads, int i) {
         List<Salads> saladsList = new ArrayList<>(salads);
         System.out.println(saladsList.get(i).toString());
     }

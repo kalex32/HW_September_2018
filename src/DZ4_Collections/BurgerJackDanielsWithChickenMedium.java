@@ -1,6 +1,6 @@
 package DZ4_Collections;
 
-class BurgerJackDanielsWithChickenMedium implements Burgers{
+class BurgerJackDanielsWithChickenMedium implements Burgers {
     private String name;
     private String descriptionSoup;
     private int weight;

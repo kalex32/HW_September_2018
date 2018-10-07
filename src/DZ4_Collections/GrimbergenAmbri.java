@@ -1,6 +1,6 @@
 package DZ4_Collections;
 
-class GrimbergenAmbri implements Beer{
+class GrimbergenAmbri implements Beer {
     private String name;
     private String descriptionBeer;
     private int volume;

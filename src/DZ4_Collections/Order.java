@@ -5,9 +5,9 @@ import java.util.LinkedHashSet;
 import java.util.List;
 
 class Order {
-    ArrayList<Dishes> order;
-    double sumOrderWithDiscount;
-    int discount;
+    private ArrayList<Dishes> order;
+    private double sumOrderWithDiscount;
+    private int discount;
 
     Order() {
         this.order = new ArrayList<>();
@@ -26,7 +26,7 @@ class Order {
         System.out.println("Ваш заказ:");
         for (Dishes y : order) {
             System.out.println(y.toString());
-            sumOrder +=(y.getAmount()* y.getPrice());
+            sumOrder += (y.getAmount() * y.getPrice());
         }
         System.out.println();
         System.out.println("Сумма Вашего заказа: " + sumOrder + " грн.");
@@ -34,7 +34,7 @@ class Order {
         discountOnOrder(sumOrder);
     }
 
-    void discountOnOrder(double sumOrder) {
+    private void discountOnOrder(double sumOrder) {
         if (sumOrder > 500 && sumOrder < 1000) {
             discount = 5;
             printDiscountOrder(sumOrder);
@@ -50,7 +50,7 @@ class Order {
         }
     }
 
-    void printDiscountOrder(double sumOrder) {
+    private void printDiscountOrder(double sumOrder) {
         sumOrderWithDiscount = sumOrder - (sumOrder / 100 * discount);
         System.out.println("Ваша скидка - " + discount + "%\n" +
                 "Сумма Вашего заказа со скидкой - " + sumOrderWithDiscount + " грн.");

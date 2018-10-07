@@ -1,6 +1,6 @@
 package DZ4_Collections;
 
-class ShashlickCaucasian implements MainCourses{
+class ShashlickCaucasian implements MainCourses {
     private String name;
     private String descriptionSoup;
     private int weight;
@@ -8,7 +8,7 @@ class ShashlickCaucasian implements MainCourses{
     private int price;
 
     ShashlickCaucasian() {
-        this.name = "по кавказски";
+        this.name = "Шашлык по кавказски";
         this.descriptionSoup = "сочный, ароматный, в особом маринаде из кунжутного масла и соевого соуса, \n" +
                 "подается на запеченной лодочке, с маринованным лучком, с гарниром из молодой капусты и аджичным соусом";
         this.weight = 100;
@@ -43,7 +43,7 @@ class ShashlickCaucasian implements MainCourses{
 
     @Override
     public String toString() {
-        return "Шашлык " + getName() + ", (" + getDescriptionSoup() + "), \n" +
+        return getName() + ", (" + getDescriptionSoup() + "), \n" +
                 +getWeight() + " гр." + ", цена - " + getPrice() + " грн. \n" +
                 "кол-во порций: " + getAmount();
     }

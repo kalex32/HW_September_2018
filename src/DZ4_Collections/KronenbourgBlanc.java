@@ -1,6 +1,6 @@
 package DZ4_Collections;
 
-class KronenbourgBlanc implements Beer{
+class KronenbourgBlanc implements Beer {
     private String name;
     private String descriptionBeer;
     private int volume;
