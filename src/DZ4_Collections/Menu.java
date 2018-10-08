@@ -29,6 +29,7 @@ class Menu {
                     default:
                         mainMenu();
                     case 5:
+                        scannerMainMenu.close();
                         System.exit(0);
                     case 1:
                         SaladsMenu.printSaladsMenu(Salads.saladsMenu());
